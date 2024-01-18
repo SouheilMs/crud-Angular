@@ -17,4 +17,10 @@ export class AppComponent implements OnInit {
       this.data = res.todos
     })
   }
+
+  deleteTodo(data: any){
+    console.log(this.data)
+    this.data.pop()
+    console.log(this.data)
+  }
 }

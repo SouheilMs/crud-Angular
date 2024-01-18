@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from '../model/todos';
 
 @Component({
@@ -9,5 +9,10 @@ import { Todo } from '../model/todos';
 export class TodosComponent  {
   
   @Input() todosInput: Todo[] = []
+  @Output() removeEventFromTodo: EventEmitter<number> = new EventEmitter<number>
+
+  sendIdToApp(data: any){
+    this.removeEventFromTodo.emit(data);
+  }
 
 }
