@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Todo } from '../model/todos';
+import { TodoBody } from '../model/todobody';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class ServiceService {
     return this.http.get(this.url + id )
   }
 
-  addTodo(todo: Todo){
+  addTodo(todo: TodoBody){
     return this.http.post(this.url + "add", todo);
   }
 

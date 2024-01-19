@@ -1,5 +1,4 @@
-export class Todo{
-    id: number = 1
+export class TodoBody{
     todo: string = ""
     completed: boolean =false
     userId: number = 55

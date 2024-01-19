@@ -17,6 +17,12 @@ export class AppComponent implements OnInit {
       this.data = res.todos
     })
   }
+  addTodo(eventdata: any){
+    console.log(eventdata);
+    this.service.addTodo(eventdata).subscribe((res: any)=>{
+      this.data.push(res)
+    })
+  }
 
   deleteTodo(data: any){
     console.log(this.data)
