@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
 import { AddComponent } from './add/add.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddComponent } from './add/add.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
